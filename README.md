@@ -7,7 +7,7 @@ jssdk是专门为H5开发者准备的工具，只要会用jquery，就可以使�
 开发者需要在页面中引入 trustnote.js 文件。
 
 ```
-<script src="/static/js/trustnote.js"></script>
+<script src="/static/js/TrustNote.js"></script>
 ```
 
 ### 得到钱包地址
