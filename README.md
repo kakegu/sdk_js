@@ -51,8 +51,6 @@ function pay() {
     }
 ```
 
-```
-
 返回值:
 
 ```
@@ -64,6 +62,7 @@ function pay() {
   error: null
 }
 ```
+### 示例
 
 示例程序：https://github.com/TrustNoteSamples/paid_reading
 
