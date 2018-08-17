@@ -1,16 +1,16 @@
 # jssdk
 
-jssdk是专门为H5开发者准备的工具，只要会用jquery，就可以使用jssdk开发基于TrustNote的H5应用。
+Jssdk is a tool specially prepared for H5 developers. As long as you use jquery, you can use jssdk to develop H5 applications based on TrustNote.
 
-### 引入 trustnote.js
+### Introducing trustnote.js
 
-开发者需要在页面中引入 trustnote.js 文件。
+Developers need to introduce a trustnote.js file into the page.
 
 ```
 <script src="/static/js/TrustNote.js"></script>
 ```
 
-### 得到钱包地址
+### Get the wallet address
 
 ```
 var address;
@@ -21,15 +21,15 @@ window.onload = function () {
 }
 ```
 
-### 转账
+### Transfer
 
 ```
 function pay() {
-        var _to_address = "OKLGMIWBCFITVWKZF3JASA23OMZLICSH";//服务方的收款地址
+        var _to_address = "OKLGMIWBCFITVWKZF3JASA23OMZLICSH";//Provider's payment address.
         var _amount = 10*1000000;   //  1 MN = 100000 ; 10 MN = 10* 100000
-        var _message = "some text" //你自己定义一些文字，可以随着交易一起上链
+        var _message = "some text" //You define some text yourself, which can be chained along with the transaction.
         var data = {
-            payer: address,//这个地址，是上面用trustnote.getAddress函数得到的用户钱包地址。
+            payer: address,//This address is the user wallet address obtained above using the trustnote.getAddress function.
             outputs: [{
                 address: _to_address,
                 amount: _amount
@@ -40,18 +40,18 @@ function pay() {
         trustnote.callPay(data, function (resp) {
             if(resp.hasOwnProperty("error")){
               if(resp.error){
-                //支付成功后的回调函数
+                //Callback function after successful payment
               }else{
-                //支付失败后的回调函数
+                //Callback function after payment failure
               }
             }else{
-              支付成功后的回调函数
+              //Callback function after successful payment
             }
         })
     }
 ```
 
-返回值:
+return value:
 
 ```
 {
@@ -62,8 +62,8 @@ function pay() {
   error: null
 }
 ```
-### 示例
+###example
 
-示例程序：https://github.com/TrustNoteSamples/paid_reading
+Sample program: https://github.com/TrustNoteSamples/paid_reading
 
-演示视频：https://github.com/TrustNoteSamples/paid_reading/raw/master/demo.mp4
+Demo video: https://github.com/TrustNoteSamples/paid_reading/raw/master/demo.mp4
