@@ -62,7 +62,7 @@ return value:
   error: null
 }
 ```
-###example
+### example
 
 Sample program: https://github.com/TrustNoteSamples/paid_reading
 
