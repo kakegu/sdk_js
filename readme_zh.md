@@ -40,9 +40,9 @@ function pay() {
         trustnote.callPay(data, function (resp) {
             if(resp.hasOwnProperty("error")){
               if(resp.error){
-                //支付成功后的回调函数
-              }else{
                 //支付失败后的回调函数
+              }else{
+                //支付成功后的回调函数
               }
             }else{
               支付成功后的回调函数
