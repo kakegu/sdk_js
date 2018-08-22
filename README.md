@@ -40,9 +40,9 @@ function pay() {
         trustnote.callPay(data, function (resp) {
             if(resp.hasOwnProperty("error")){
               if(resp.error){
-                //Callback function after successful payment
-              }else{
                 //Callback function after payment failure
+              }else{
+                //Callback function after successful payment
               }
             }else{
               //Callback function after successful payment
